@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import Initialize from './Initialize';
 import reportWebVitals from './reportWebVitals';
@@ -7,7 +8,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Initialize />
+    <Router>
+      <Initialize />
+    </Router>
   </React.StrictMode>
 );
 
