@@ -2,26 +2,139 @@
   text-align: center;
 }
 
-.App-logo {
+.app-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+
+
+.cover-box {
+  background-color: black;
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right-box {
+  height: 35vh;
+  width: 55vh;
+  background-image: url('./assets/1A.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: contrast(75%) grayscale(100%);
+}
+
+.left-box {
+  height: 3vh;
+  width: 55vh;
+  background-image: url('./assets/front_2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: contrast(75%) grayscale(100%);
+}
+
+.curved {
+  background: #838bc4;
+  width: 100vw;
+  height: 45vh;
+  border-bottom-left-radius: 50% 15%;
+  border-bottom-right-radius: 50% 15%;
+  margin-bottom: 2rem;
+}
+
 #logo {
-height: 250px;
+height: 30vh;
+z-index: 99;
 }
 
 #navBar {
+  background: black;
   display: flex;
   flex-direction: row;
+  height: 10vh;
   justify-content: space-around;
+  width: 100vw;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.hamburger {
+  background-color: #838bc4;
+  border-radius: 15%;
+  width: 15vw;
+  height: 15vw;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 2;
+
+  @media (min-width: 600px) {
+    display: none;
+  }
+}
+
+.navigation {
+  display: flex;
+  background-color: #838bc4;
+  border-radius: 15%;
+  width: 25vw;
+  height: 35vw;
+  position: fixed;
+  bottom: 15vh;
+  right: 2vh;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem .5rem;
+
+  @media (min-width: 600px) {
+    display: none;
+  }
+}
+
+.navigation.slide-in {
+  animation: slide-in 1s forwards;
+}
+
+.navigation.slide-out {
+  animation: slide-out 1s forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+
+.hamburger img {
+  width: 5vh;
+  height: 8vh;
 }
 
 .nav-item {
   margin: 16px;
 }
 
-.App-header {
+.app-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -31,15 +144,17 @@ height: 250px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app-link {
+  align-self: center;
+  color: whitesmoke;
+  transition: color 200ms ease-out 100ms, font-size 200ms ease-out 100ms;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-link:hover {
+  color: #b99ac8;
+@media (min-width: 600px) {
+  font-size: 32px;
 }
+}
+
