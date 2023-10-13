@@ -26,7 +26,7 @@ export default function TrackCard({
       .catch((error) => {
         console.error('Error fetching or processing lyrics:', error);
       });
-  });
+  }, [trackLyricsFile]);
 
   return (
     <div className="track-card">
