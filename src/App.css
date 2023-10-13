@@ -173,7 +173,11 @@ z-index: 99;
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;
-  width: 70vw;
+  width: 50vw;
+
+  @media (max-width: 600px) {
+    height: 25vh;
+  }
 }
 
 .track-image {
@@ -206,7 +210,13 @@ z-index: 99;
   .track-audio {
     position: absolute;
     bottom: 0;
-    left: 25px;
+    margin-bottom: 1rem;
+    max-width: 50%;
+    @media (max-width: 600px) {
+      left: 10px;
+      object-fit: contain;
+      max-width: 95%;
+    }
   }
 
 }
