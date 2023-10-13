@@ -162,6 +162,13 @@ z-index: 99;
 }
 }
 
+.lyric-link {
+  color: black;
+  font-weight: 500;
+  align-self: start;
+  justify-self: end;
+}
+
 .track-card {
   position: relative;
   background-color: #b99ac8;
@@ -176,7 +183,8 @@ z-index: 99;
   width: 50vw;
 
   @media (max-width: 600px) {
-    height: 25vh;
+    height: 30vh;
+    width: 75vw;
   }
 }
 
