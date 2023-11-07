@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  background-color: #282c34;
+}
+
 .app-logo {
   height: 40vmin;
   pointer-events: none;
@@ -136,7 +140,7 @@ z-index: 99;
 
 .app-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,5 +160,72 @@ z-index: 99;
 @media (min-width: 600px) {
   font-size: 32px;
 }
+}
+
+.lyric-link {
+  color: black;
+  font-weight: 500;
+  align-self: start;
+  justify-self: end;
+}
+
+.track-card {
+  position: relative;
+  background-color: #b99ac8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  width: 50vw;
+
+  @media (max-width: 600px) {
+    height: 30vh;
+    width: 75vw;
+  }
+}
+
+.track-image {
+  height: 8rem;
+  margin-right: 1rem;
+  width: 8rem;
+  @media (max-width: 600px) {
+    height: 6rem;
+    width: 6rem;
+  }
+}
+
+.track-information {
+  display: flex;
+  flex-grow: 4;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: flex-start;
+  text-align: start;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0px;
+  }
+
+  .track-title {
+    margin: 0;
+  }
+
+  .track-audio {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+    max-width: 50%;
+    @media (max-width: 600px) {
+      left: 10px;
+      object-fit: contain;
+      max-width: 95%;
+    }
+  }
+
 }
 

@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './Components/Navbar';
 import logo from './assets/transparentlogo.png';
+import PublicRoutes from './routes/PublicRoutes.js'
 
 function Initialize() {
   return (
@@ -14,6 +15,7 @@ function Initialize() {
         </section>
         <Navbar/>
       </header>
+      <PublicRoutes />
     </div>
   );
 }
